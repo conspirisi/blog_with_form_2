@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Include custom CSS if needed -->
+  <link rel="stylesheet" href="/styles/custom.css">
+</head>
+<body>
+  {% include "nav.njk" %}
+  <div class="container">
+   
+    {{ content | safe }}
+  </div>
+  {% include "footer.njk" %}
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
