@@ -25,32 +25,20 @@
 
   <div class="container">
    
-    <h1>Contact Us</h1>
-<p><form action="/destination/" method="get">
-<div class="form-row">
-<div class="form-group col-md-4">
-<label for="FirstName">First Name:</label>
-<input type="text" class="form-control" id="FirstName" name="FirstName" required>
-</div>
-</div>
-<div class="form-row">
-<div class="form-group col-md-4">
-<label for="Surname">Surname:</label>
-<input type="text" class="form-control" id="Surname" name="Surname" required>
-</div>
-</div>
-<div class="form-row">
-<div class="form-group col-md-4">
-<label for="email">Email:</label>
-<input type="email" class="form-control" id="email" name="email" required>
-</div>
-</div>
-<div class="form-group">
-<label for="freetext">Free Text (up to 150 characters):</label>
-<textarea class="form-control" id="freetext" name="freetext" maxlength="150" rows="4" required></textarea>
-</div>
-<button type="submit" class="btn btn-primary">Submit</button>
-</form></p>
+    <p><h2>Form Data</h2>
+<div id="formData"></div></p>
+<p><script>
+// Get query parameters from the URL
+const urlParams = new URLSearchParams(window.location.search);</p>
+<p>// Extract form data
+const firstName = urlParams.get('FirstName');
+const surname = urlParams.get('Surname');
+const email = urlParams.get('email');
+const freetext = urlParams.get('freetext');</p>
+<p>// Display the form data on the page
+const formDataDiv = document.getElementById('formData');
+formDataDiv.innerHTML = <code>            &lt;p&gt;&lt;strong&gt;First Name:&lt;/strong&gt; ${firstName}&lt;/p&gt;             &lt;p&gt;&lt;strong&gt;Surname:&lt;/strong&gt; ${surname}&lt;/p&gt;             &lt;p&gt;&lt;strong&gt;Email:&lt;/strong&gt; ${email}&lt;/p&gt;             &lt;p&gt;&lt;strong&gt;Free Text:&lt;/strong&gt; ${freetext}&lt;/p&gt;        </code>;
+</script></p>
 
   </div>
   <footer class="footer bg-light mt-4 py-3">
